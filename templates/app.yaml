@@ -7,18 +7,6 @@ topicName: eladb-topic-1234
 region: us-east-1
 ---
 apiVersion: acme.com/v1
-kind: Cron
-metadata:
-  name: eladb-cron
-schedule: "* * 1* * *"
-image: busybox:1.28
-command:
-  - /bin/sh
-  - -c
-  - date; echo World
-
----
-apiVersion: acme.com/v1
 kind: Run
 metadata:
   name: check-topic
