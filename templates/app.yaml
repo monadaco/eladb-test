@@ -1,0 +1,7 @@
+apiVersion: acme.com/v1
+kind: Topic
+metadata:
+  name: my-topic
+
+topicName: eladb-topic-1234
+region: us-east-1

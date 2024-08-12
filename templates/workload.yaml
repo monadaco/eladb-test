@@ -1,9 +1,0 @@
-apiVersion: acme.com/v1
-kind: Workload
-metadata:
-  name: workload
-image: busybox
-port: 5678
-route: /eladb-test(/|$)(.*)
-rewrite: /$2
-replicas: 2
