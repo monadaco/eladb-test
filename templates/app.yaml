@@ -5,6 +5,18 @@ metadata:
 
 topicName: eladb-topic-1234
 region: us-east-1
+---
+apiVersion: acme.com/v1
+kind: Cron
+metadata:
+  name: eladb-cron
+schedule: "* * 1* * *"
+image: busybox:1.28
+command:
+  - /bin/sh
+  - ${ref://food.acme.com/bar/baz}
+  - -c
+  - date; echo World
 
 ---
 apiVersion: acme.com/v1
