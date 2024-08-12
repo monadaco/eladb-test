@@ -5,3 +5,12 @@ metadata:
 
 topicName: eladb-topic-1234
 region: us-east-1
+---
+apiVersion: acme.com/v1
+kind: Run
+metadata:
+  name: check-topic
+command:
+  - /bin/sh
+  - -c
+  - echo "hello, ${ref://topics.acme.com/my-topic/topicArn}"
